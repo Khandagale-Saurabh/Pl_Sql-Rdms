@@ -1,0 +1,30 @@
+TableName:dept
+	deptno,deptloc,deptname
+
+CREATE OR REPLACE PROCEDURE addnewdept_proc (
+dept_no IN NUMBER, d_loc IN VARCHAR2, d_name IN VARCHAR2) IS
+BEGIN
+	INSERT INTO dept ( deptno, deptloc, deptname) VALUES ( dept_no, d_loc, d_name);
+END addnewdept_proc;
+
+
+Sql>execute addnewdept_proc (10,'nagpur','computer);
+
+*******************************************************************************************************************************
+Tablename:emp
+		emp_no,emp_name,emp_sal
+
+CREATE OR REPLACE PROCEDURE getsal (
+empname IN NUMBER, salary out number) IS
+BEGIN
+	select emp_sal into salary from emp where e_name=empname;
+END addnewdept_proc;
+
+
+
+Sql>variable payment number;
+Sql>execute getsal('ram',:payment);
+Sql>print payment;
+
+
+

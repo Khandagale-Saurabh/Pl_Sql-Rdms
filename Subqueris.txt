@@ -1,0 +1,20 @@
+
+
+SUB QUERIES:  when we are using more than one select statement to perform particular operation then we will be calling it as a subquery.In subquery the inner statement  will be executed first and only noce as compared to the outer statement.
+
+Syntax:          select -----------
+		     From<table name>
+		     Where(select ------);
+
+A subquery is a form of an SQL statement that appears inside another SQL statement.
+It is also termed as a nested query.The statement containing a subquery is called parent statement.
+The rows returned by the subquery used by the parent statement.
+
+
+It can be used:
+
+1) To insert records in the target table.
+2) To create tables and insert records in this table.
+3) To update records in the target table.
+4) To create views.
+5) To provide values for the conditions in the WHERE, HAVING IN, SELECT, UPDATE and DELETE statements.
